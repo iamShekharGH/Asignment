@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JsonPlaceholder</string>
+    <string name="please_wait_while_we_fetch_the_details">Please Wait while we fetch the details</string>
+</resources>

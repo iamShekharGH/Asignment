@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentFirst">
+
+    <fragment
+        android:id="@+id/fragmentFirst"
+        android:name="com.iamshekhargh.jsonplaceholder.ui.firstFragment.FragmentFirst"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_fragmentFirst_to_fragmentDisplay"
+            app:destination="@id/fragmentDisplay" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDisplay"
+        android:name="com.iamshekhargh.jsonplaceholder.ui.albumsList.FragmentDisplay"
+        android:label="fragment_display_list"
+        tools:layout="@layout/fragment_display_list" >
+        <argument
+            android:name="tablist"
+            app:argType="com.iamshekhargh.jsonplaceholder.network.models.res.AlbumsResponse" />
+    </fragment>
+</navigation>
